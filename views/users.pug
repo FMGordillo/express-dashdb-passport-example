@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1= title
+  p If you see a #[code list of 10 employees] below, congratulations! Your configuration is ok!
+  p If not, please check the console, to see any errors.
+  br
+  table.table.table-striped
+    tr
+        th FIRST_NAME
+        th LAST_NAME
+        th EMAIL
+        th WORK_PHONE
+    each employee in result
+        tr
+            td= employee.FIRST_NAME
+            td= employee.LAST_NAME
+            td= employee.EMAIL
+            td= employee.WORK_PHONE
+    
+  
