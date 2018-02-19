@@ -63,19 +63,6 @@ passport.use(new Strategy(
 			if(!user) return cb(null, false);
 			return cb(null, user);
 		});
-	//	db.findByUsername(username, (err, user) => {
-	// 		if (err) {
-	// 			return cb(err);
-	// 		}
-	// 		if (!user) {
-	// 			return cb(null, false);
-	// 		}
-	// 		// TODO: is there a better way to check this?
-	// 		if (user[0].COMPANY_PASSWORD != password) {
-	// 			return cb(null, false);
-	// 		}
-	// 		return cb(null, user);
-	// 	});
 	}
 ));
 passport.serializeUser(function (user, cb) {
