@@ -16,10 +16,11 @@ npm install
 npm start
 ```
 
-## Deploy on Bluemix
+## Deploy on IBM Cloud
+First you must create an [IBM Cloud](https://www.ibm.com/cloud/) account
 The package [cfenv](https://www.npmjs.com/package/cfenv) handles `VCAP_SERVICES` to get the credentials. More info, coming soon
 
 # TODOs
-- [ ] Create `Deploy on Bluemix` button
+- [ ] Create `Deploy on IBM Cloud` button
 - [ ] Complete README
 - [ ] Make an example for login/register handler
