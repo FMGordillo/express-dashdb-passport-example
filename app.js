@@ -48,11 +48,12 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser());
 app.use(session({
-	secret: 'keyboard cat',
+	secret: 'keyboard cat', // NOTE: Must change this to be "unique"
 	resave: false,
 	saveUninitialized: false,
 	store: sessionStore // We save the session in a table in our dashDb
 }));
+
 app.use(passport.initialize());
 app.use(passport.session());
 passport.use(new Strategy(
@@ -66,10 +67,10 @@ passport.use(new Strategy(
 	}
 ));
 passport.serializeUser(function (user, cb) {
-	cb(null, user[0].EMPLOYEE_CODE);
+	cb(null, user.id); // NOTE: Depends how you persist users
 });
-passport.deserializeUser(function (code, cb) {
-	db.findByEmployeeCode(code, function (err, user) {
+passport.deserializeUser(function (id, cb) {
+	db.findById(id, function (err, user) { // NOTE: Depends how you persist users
 		if (err) {
 			return cb(err, null);
 		}
