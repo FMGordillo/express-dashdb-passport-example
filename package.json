@@ -7,18 +7,18 @@
   },
   "dependencies": {
     "body-parser": "~1.19.0",
-    "cfenv": "^1.2.2",
+    "cfenv": "^1.2.1",
     "connect-db2": "^0.6.0",
     "cookie-parser": "~1.4.4",
-    "debug": "~4.1.1",
+    "debug": "~2.6.9",
     "dotenv": "^8.0.0",
-    "express": "~4.17.1",
-    "express-session": "^1.16.1",
-    "ibm_db": "^2.5.2",
+    "express": "~4.15.5",
+    "express-session": "^1.15.6",
+    "ibm_db": "^2.4.1",
     "morgan": "~1.9.1",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "pug": "~2.0.3",
-    "serve-favicon": "~2.5.0"
+    "pug": "~2.0.0",
+    "serve-favicon": "~2.4.5"
   }
 }
